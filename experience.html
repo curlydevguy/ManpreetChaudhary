@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience & Certifications | Manpreet Chaudhary</title>
+  <meta name="description" content="Professional research experience at IIT Roorkee, autonomous drone systems contributions under Dr. Neetesh Kumar, and verified credentials.">
+  <meta name="theme-color" content="#f8f9fa">
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div id="scroll-progress" class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Interactive Subtle Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Cursor Spotlight Layer -->
+  <div id="cursor-spotlight" class="cursor-spotlight-layer"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- Redesigned Navbar with Liquid Glass & Circular Avatar -->
+  <header class="navbar">
+    <div class="container-wide navbar-inner">
+      <a href="index.html" class="nav-brand" aria-label="Manpreet Chaudhary Home">
+        <div class="brand-avatar-wrap">
+          <img src="images/manpreet-avatar.jpg" alt="Manpreet Chaudhary" class="brand-avatar-img">
+          <span class="brand-beacon-dot"></span>
+        </div>
+        <div class="brand-text-col">
+          <span class="brand-name">Manpreet Chaudhary</span>
+          <span class="brand-sub">IIT Roorkee • CSE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-desktop" aria-label="Primary Navigation">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="drone-research.html" class="nav-link">Drone Research</a></div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="experience.html" class="nav-link active">Experience</a></div>
+        <div class="nav-item"><a href="skills.html" class="nav-link">Skills</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="nav-action-area">
+        <button id="mobile-nav-toggle" class="nav-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-nav-drawer">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link"><span>Home</span> <span>→</span></a></li>
+        <li><a href="drone-research.html" class="mobile-nav-link"><span>Drone Research</span> <span>→</span></a></li>
+        <li><a href="projects.html" class="mobile-nav-link"><span>Projects</span> <span>→</span></a></li>
+        <li><a href="experience.html" class="mobile-nav-link active"><span>Experience</span> <span>→</span></a></li>
+        <li><a href="skills.html" class="mobile-nav-link"><span>Skills</span> <span>→</span></a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><span>Contact</span> <span>→</span></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main id="page-content">
+
+    <!-- Experience Timeline Section -->
+    <section class="section" style="padding-top: calc(var(--header-height) + 2.5rem);">
+      <div class="container-wide">
+        
+        <div class="section-header reveal-from-top">
+          <span class="section-tag">Career & Research History</span>
+          <h1>Experience & Research Appointments</h1>
+          <p class="section-description">
+            Academic internship at IIT Roorkee under Dr. Neetesh Kumar, lead platform engineering for symposiums, and accredited technical credentials.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- Timeline Entry 1: IIT Roorkee Research Internship -->
+          <div class="timeline-item reveal-from-left">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Research Intern</h3>
+                  <div class="timeline-company">Indian Institute of Technology Roorkee (IIT Roorkee)</div>
+                </div>
+                <div class="timeline-period">July 6, 2026 — Present (Ongoing)</div>
+              </div>
+
+              <div style="font-size: 0.94rem; color: var(--accent-primary); font-weight: 600; margin-bottom: 0.75rem;">
+                Faculty Advisor: Dr. Neetesh Kumar, Associate Professor, Department of Computer Science & Engineering
+              </div>
+
+              <div class="timeline-desc">
+                <p style="margin-bottom: 0.75rem; color: var(--text-primary); font-weight: 600;">
+                  Core Contribution: Autonomous Drone Development
+                </p>
+                <ul>
+                  <li>Formulating and developing autonomous flight and navigation software modules for unmanned aerial vehicles (UAVs) under Dr. Neetesh Kumar.</li>
+                  <li>Engineering spatial localization pipelines integrating mono-camera trigonometric triangulation, ArUco fiducials, and YOLOPoint deep keypoint extractors.</li>
+                  <li>Integrating Intel RealSense D455 active infrared stereo sensors for 3D point-cloud mapping and spatial obstacle clearance.</li>
+                  <li>Streaming real-time telemetry, visual odometry, and flight control states between companion SBCs and ground telemetry stations at &lt; 24ms latency.</li>
+                </ul>
+              </div>
+
+              <div class="tag-list">
+                <span class="tag-pill" style="border-color: rgba(37, 99, 235, 0.35); color: var(--accent-primary);">IIT Roorkee</span>
+                <span class="tag-pill">Autonomous UAVs</span>
+                <span class="tag-pill">YOLOPoint</span>
+                <span class="tag-pill">Intel RealSense D455</span>
+                <span class="tag-pill">C++ & Python</span>
+                <span class="tag-pill">ROS2</span>
+                <span class="tag-pill">Telemetry Streaming</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Entry 2: Platform Architect & Symposia -->
+          <div class="timeline-item reveal-from-right">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Lead Platform & Infrastructure Developer</h3>
+                  <div class="timeline-company">Academic Workshops & Symposia Platforms</div>
+                </div>
+                <div class="timeline-period">2024 — Present</div>
+              </div>
+
+              <div class="timeline-desc">
+                <ul>
+                  <li>Architected and delivered the official IIT Roorkee "AI for Secure 6G" workshop platform with automated Razorpay payments, OTP verification, and AI ID validation.</li>
+                  <li>Designed Dr. Neetesh Kumar's official faculty research hub, showcasing laboratory projects in Autonomous Vehicles and Intelligent Transportation Systems.</li>
+                  <li>Leveraged Next.js App Router and Vercel Edge compute to achieve sub-24ms international response times and zero cold-start latency.</li>
+                  <li>Instituted GPU-accelerated design patterns delivering clean aesthetics without layout thrashing.</li>
+                </ul>
+              </div>
+
+              <div class="tag-list">
+                <span class="tag-pill">Next.js</span>
+                <span class="tag-pill">TypeScript</span>
+                <span class="tag-pill">Razorpay API</span>
+                <span class="tag-pill">Google APIs</span>
+                <span class="tag-pill">Tailwind CSS</span>
+                <span class="tag-pill">Vercel Edge</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Certifications & Credentials Section -->
+    <section class="section" style="background: #ffffff; border-top: 1px solid var(--border-subtle);">
+      <div class="container-wide">
+        
+        <div class="section-header reveal-from-top">
+          <span class="section-tag">Verified Credentials</span>
+          <h2>Certifications & Professional Badges</h2>
+          <p class="section-description">
+            Industry and research accreditations across artificial intelligence, cybersecurity incident response, full-stack systems, and autonomous robotics.
+          </p>
+        </div>
+
+        <div class="cert-grid stagger-container">
+
+          <!-- Cert 1: Oracle AI -->
+          <div class="cert-card reveal-from-left">
+            <div class="cert-top">
+              <div class="cert-badge-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line></svg>
+              </div>
+              <span class="cert-issuer">Oracle University</span>
+            </div>
+            <h3 class="cert-title">Oracle Cloud Infrastructure 2024 AI Foundations Associate</h3>
+            <div class="cert-date">2024 — 2025 • Verified Credential</div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Foundational AI/ML architectures, large language models, computer vision primitives, and automated ML pipelines on Oracle Cloud.
+            </p>
+            <div class="cert-skills">
+              <span class="tag-pill">Artificial Intelligence</span>
+              <span class="tag-pill">Machine Learning</span>
+              <span class="tag-pill">Oracle Cloud</span>
+            </div>
+            <div style="margin-top: 1.25rem;">
+              <a href="https://www.linkedin.com/in/manpreet-chaudhary-238244279/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.82rem; width: 100%;">
+                <span>Verify on LinkedIn</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 2: Deloitte Cyber -->
+          <div class="cert-card reveal-from-bottom">
+            <div class="cert-top">
+              <div class="cert-badge-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <span class="cert-issuer">Deloitte (Forage)</span>
+            </div>
+            <h3 class="cert-title">Cybersecurity Job Simulation Credential</h3>
+            <div class="cert-date">2024 • Verified Credential</div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Real-world enterprise cyber incident response, threat intelligence, packet analysis, malware classification, and remediation strategy.
+            </p>
+            <div class="cert-skills">
+              <span class="tag-pill">Threat Analysis</span>
+              <span class="tag-pill">Incident Response</span>
+              <span class="tag-pill">Network Security</span>
+            </div>
+            <div style="margin-top: 1.25rem;">
+              <a href="https://www.linkedin.com/in/manpreet-chaudhary-238244279/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.82rem; width: 100%;">
+                <span>Verify on LinkedIn</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 3: Full-Stack Bootcamp -->
+          <div class="cert-card reveal-from-bottom">
+            <div class="cert-top">
+              <div class="cert-badge-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <span class="cert-issuer">Industry Accredited</span>
+            </div>
+            <h3 class="cert-title">Full-Stack Web Development Bootcamp</h3>
+            <div class="cert-date">2024 — 2025 • Verified Credential</div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Comprehensive full-stack engineering: React/Next.js, Node.js, Express, REST APIs, asynchronous database transactions, and cloud deployments.
+            </p>
+            <div class="cert-skills">
+              <span class="tag-pill">HTML5/CSS3</span>
+              <span class="tag-pill">JavaScript / TS</span>
+              <span class="tag-pill">Node.js</span>
+            </div>
+            <div style="margin-top: 1.25rem;">
+              <a href="https://www.linkedin.com/in/manpreet-chaudhary-238244279/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.82rem; width: 100%;">
+                <span>Verify on LinkedIn</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 4: Autonomous Systems -->
+          <div class="cert-card reveal-from-right">
+            <div class="cert-top">
+              <div class="cert-badge-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <span class="cert-issuer">Robotics Engineering</span>
+            </div>
+            <h3 class="cert-title">Autonomous Systems & Robotics Engineering</h3>
+            <div class="cert-date">2025 — 2026 • Verified Credential</div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Advanced foundations in state estimation, path planning heuristics, ROS2 message architectures, and closed-loop robotic control.
+            </p>
+            <div class="cert-skills">
+              <span class="tag-pill">Autonomous UAVs</span>
+              <span class="tag-pill">ROS2</span>
+              <span class="tag-pill">Computer Vision</span>
+            </div>
+            <div style="margin-top: 1.25rem;">
+              <a href="https://www.linkedin.com/in/manpreet-chaudhary-238244279/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.82rem; width: 100%;">
+                <span>Verify on LinkedIn</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Spotlight Ambient Focus Toggle Widget -->
+  <button id="spotlight-toggle-btn" class="spotlight-toggle-widget" title="Cursor Spotlight Aura: Active (Click to toggle)" aria-label="Toggle Cursor Spotlight Aura">
+    <span class="indicator-bulb"></span>
+    <span class="toggle-text">Aura Focus: Active</span>
+  </button>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container-wide footer-content">
+      <div class="footer-brand-col">
+        <div class="footer-name">Manpreet Chaudhary</div>
+        <p class="footer-credits">
+          Research Intern @ IIT Roorkee • Mentored by Dr. Neetesh Kumar (Associate Professor, Dept. of CSE)
+        </p>
+      </div>
+
+      <div class="footer-right-col">
+        <div class="footer-social-links">
+          <a href="https://www.linkedin.com/in/manpreet-chaudhary-238244279/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Profile">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:manpreet.chaudhary@cse.iitr.ac.in" class="footer-social-link" aria-label="Email Address">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Email</span>
+          </a>
+        </div>
+        <span class="footer-copyright">© 2026 Manpreet Chaudhary. Designed for performance & clarity.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/canvas-bg.js"></script>
+  <script type="module" src="js/cursor.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

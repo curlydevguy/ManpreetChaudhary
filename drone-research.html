@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous Drone Development | Manpreet Chaudhary — IIT Roorkee</title>
+  <meta name="description" content="Technical deep-dive into the Autonomous Drone Development research initiative under Dr. Neetesh Kumar at IIT Roorkee: telemetry HUD, mono-camera triangulation, YOLOPoint keypoints, ArUco fiducials, and Intel RealSense D455 depth fusion.">
+  <meta name="theme-color" content="#f8f9fa">
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div id="scroll-progress" class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Interactive Subtle Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Cursor Spotlight Layer -->
+  <div id="cursor-spotlight" class="cursor-spotlight-layer"></div>
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- Redesigned Navbar with Liquid Glass & Circular Avatar -->
+  <header class="navbar">
+    <div class="container-wide navbar-inner">
+      <a href="index.html" class="nav-brand" aria-label="Manpreet Chaudhary Home">
+        <div class="brand-avatar-wrap">
+          <img src="images/manpreet-avatar.jpg" alt="Manpreet Chaudhary" class="brand-avatar-img">
+          <span class="brand-beacon-dot"></span>
+        </div>
+        <div class="brand-text-col">
+          <span class="brand-name">Manpreet Chaudhary</span>
+          <span class="brand-sub">IIT Roorkee • CSE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-desktop" aria-label="Primary Navigation">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="drone-research.html" class="nav-link active">Drone Research</a></div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="experience.html" class="nav-link">Experience</a></div>
+        <div class="nav-item"><a href="skills.html" class="nav-link">Skills</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="nav-action-area">
+        <button id="mobile-nav-toggle" class="nav-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-nav-drawer">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link"><span>Home</span> <span>→</span></a></li>
+        <li><a href="drone-research.html" class="mobile-nav-link active"><span>Drone Research</span> <span>→</span></a></li>
+        <li><a href="projects.html" class="mobile-nav-link"><span>Projects</span> <span>→</span></a></li>
+        <li><a href="experience.html" class="mobile-nav-link"><span>Experience</span> <span>→</span></a></li>
+        <li><a href="skills.html" class="mobile-nav-link"><span>Skills</span> <span>→</span></a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><span>Contact</span> <span>→</span></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main id="page-content">
+
+    <section class="section" style="padding-top: calc(var(--header-height) + 2.5rem);">
+      <div class="container-wide">
+        
+        <!-- Section Header -->
+        <div class="section-header reveal-from-top">
+          <span class="section-tag">Autonomous Aerial Robotics</span>
+          <h1>Autonomous Drone Development</h1>
+          <p class="section-description">
+            Contributing to the <strong>Autonomous Drone Development</strong> research project under <strong>Dr. Neetesh Kumar</strong> (Associate Professor, Dept. of Computer Science & Engineering, IIT Roorkee). Engineering high-reliability autonomous flight software, visual localization pipelines, and real-time telemetry streaming for unmanned aerial vehicles.
+          </p>
+        </div>
+
+        <!-- Telemetry Status HUD Panel -->
+        <div class="research-hud-panel reveal-scale">
+          <div class="hud-group">
+            <div class="hud-beacon"></div>
+            <div>
+              <div class="hud-label">Compute State</div>
+              <div class="hud-value">ACTIVE FLIGHT PIPELINE</div>
+            </div>
+          </div>
+
+          <div class="hud-group">
+            <div>
+              <div class="hud-label">Edge Latency</div>
+              <div class="hud-telemetry-badge">&lt; 24ms Control Loop</div>
+            </div>
+          </div>
+
+          <div class="hud-group">
+            <div>
+              <div class="hud-label">Sensor Architecture</div>
+              <div class="hud-value">YOLOPoint + ArUco + RealSense D455</div>
+            </div>
+          </div>
+
+          <div class="hud-group">
+            <div>
+              <div class="hud-label">Faculty Advisor</div>
+              <div class="hud-value">Dr. Neetesh Kumar (CSE, IIT Roorkee)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Four-Stage Algorithmic Pipeline -->
+        <div class="pipeline-grid stagger-container" style="margin-bottom: 4rem;">
+          
+          <!-- Stage 1 -->
+          <div class="pipeline-step-card reveal-from-left">
+            <span class="pipeline-phase-badge">Stage 01 // Visual Markers</span>
+            <h3 class="pipeline-step-title">ArUco Fiducial Tracking & Marker Pose</h3>
+            <p class="pipeline-step-desc">
+              Sub-pixel corner detection and 6-DOF relative pose estimation relative to structured landing platforms and known waypoints, providing absolute ground-truth orientation.
+            </p>
+            <div class="pipeline-spec-box">
+              <div class="spec-row"><span class="spec-key">Fiducial:</span> <span class="spec-val">ArUco Dict 6x6 (250)</span></div>
+              <div class="spec-row"><span class="spec-key">Corner Sub-Pixel:</span> <span class="spec-val">cv2.cornerSubPix</span></div>
+              <div class="spec-row"><span class="spec-key">Solver:</span> <span class="spec-val">solvePnP (Iterative)</span></div>
+            </div>
+            <div class="pipeline-tags">
+              <span class="tag-pill">ArUco</span>
+              <span class="tag-pill">OpenCV</span>
+              <span class="tag-pill">Python</span>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="pipeline-step-card reveal-from-bottom">
+            <span class="pipeline-phase-badge">Stage 02 // Triangulation</span>
+            <h3 class="pipeline-step-title">Mono-Camera Epipolar Triangulation</h3>
+            <p class="pipeline-step-desc">
+              Mathematical reconstruction of 3D Euclidean coordinates across continuous video frames from a single monocular lens, utilizing trigonometric parallax, intrinsic camera calibration matrices, and fundamental matrix estimation.
+            </p>
+            <div class="pipeline-spec-box">
+              <div class="spec-row"><span class="spec-key">Geometry:</span> <span class="spec-val">P_c = K [R | t] P_w</span></div>
+              <div class="spec-row"><span class="spec-key">Calibration:</span> <span class="spec-val">Radial Distortion Fix</span></div>
+              <div class="spec-row"><span class="spec-key">Drift:</span> <span class="spec-val">Closed-Loop Corrected</span></div>
+            </div>
+            <div class="pipeline-tags">
+              <span class="tag-pill">Epipolar Geometry</span>
+              <span class="tag-pill">Triangulation</span>
+              <span class="tag-pill">C++</span>
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="pipeline-step-card reveal-from-bottom">
+            <span class="pipeline-phase-badge">Stage 03 // Deep Features</span>
+            <h3 class="pipeline-step-title">YOLOPoint Neural Keypoint Extraction</h3>
+            <p class="pipeline-step-desc">
+              Real-time embedded neural network inference generating dense, illumination-invariant visual keypoints and descriptors for robust visual odometry across dynamic, unstructured, and low-contrast environments.
+            </p>
+            <div class="pipeline-spec-box">
+              <div class="spec-row"><span class="spec-key">Architecture:</span> <span class="spec-val">YOLOPoint CNN</span></div>
+              <div class="spec-row"><span class="spec-key">Inference:</span> <span class="spec-val">Edge TensorRT / ONNX</span></div>
+              <div class="spec-row"><span class="spec-key">Robustness:</span> <span class="spec-val">Motion Blur Invariant</span></div>
+            </div>
+            <div class="pipeline-tags">
+              <span class="tag-pill">YOLOPoint</span>
+              <span class="tag-pill">Deep Learning</span>
+              <span class="tag-pill">Edge AI</span>
+            </div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="pipeline-step-card reveal-from-right">
+            <span class="pipeline-phase-badge">Stage 04 // Depth Fusion</span>
+            <h3 class="pipeline-step-title">Active Intel RealSense D455 Fusion</h3>
+            <p class="pipeline-step-desc">
+              Extended spatial pipeline utilizing the Intel RealSense D455 active infrared stereo camera, generating dense 3D point-clouds and metric depth maps up to 6 meters for real-time obstacle avoidance and spatial clearance.
+            </p>
+            <div class="pipeline-spec-box">
+              <div class="spec-row"><span class="spec-key">Sensor:</span> <span class="spec-val">Intel RealSense D455</span></div>
+              <div class="spec-row"><span class="spec-key">Field of View:</span> <span class="spec-val">86° × 57° Global Shutter</span></div>
+              <div class="spec-row"><span class="spec-key">Loop Latency:</span> <span class="spec-val">&lt; 24ms Response</span></div>
+            </div>
+            <div class="pipeline-tags">
+              <span class="tag-pill">RealSense D455</span>
+              <span class="tag-pill">3D Point Clouds</span>
+              <span class="tag-pill">ROS2</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hardware & System Architecture Callout Strip -->
+        <div class="glass-card reveal-on-scroll" style="padding: 2.75rem; border-color: var(--border-accent);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+            <div>
+              <span class="section-tag">Embedded Hardware</span>
+              <h3 style="font-size: 1.45rem; margin-bottom: 0.75rem;">Platform & Sensor Suite</h3>
+              <p style="font-size: 0.96rem; color: var(--text-secondary); line-height: 1.65;">
+                Engineered for edge deployment aboard custom quadcopter frames. The onboard companion SBC communicates directly with the PX4 flight controller over high-baud UART serial links, managing real-time visual odometry pipelines.
+              </p>
+            </div>
+
+            <div>
+              <span class="section-tag">Telemetry Bridge</span>
+              <h3 style="font-size: 1.45rem; margin-bottom: 0.75rem;">Real-Time Ground Station</h3>
+              <p style="font-size: 0.96rem; color: var(--text-secondary); line-height: 1.65;">
+                Telemetry broadcasting routines stream spatial pose, obstacle proximity vectors, and health metrics back to ground stations with end-to-end latencies under 24ms.
+              </p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
+              <a href="projects.html" class="btn btn-primary">
+                <span>View Related Platforms</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="contact.html" class="btn btn-secondary">
+                <span>Discuss Research Collaboration</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Spotlight Ambient Focus Toggle Widget -->
+  <button id="spotlight-toggle-btn" class="spotlight-toggle-widget" title="Cursor Spotlight Aura: Active (Click to toggle)" aria-label="Toggle Cursor Spotlight Aura">
+    <span class="indicator-bulb"></span>
+    <span class="toggle-text">Aura Focus: Active</span>
+  </button>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container-wide footer-content">
+      <div class="footer-brand-col">
+        <div class="footer-name">Manpreet Chaudhary</div>
+        <p class="footer-credits">
+          Research Intern @ IIT Roorkee • Mentored by Dr. Neetesh Kumar (Associate Professor, Dept. of CSE)
+        </p>
+      </div>
+
+      <div class="footer-right-col">
+        <div class="footer-social-links">
+          <a href="https://www.linkedin.com/in/manpreet-chaudhary-238244279/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Profile">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:manpreet.chaudhary@cse.iitr.ac.in" class="footer-social-link" aria-label="Email Address">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Email</span>
+          </a>
+        </div>
+        <span class="footer-copyright">© 2026 Manpreet Chaudhary. Designed for performance & clarity.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/canvas-bg.js"></script>
+  <script type="module" src="js/cursor.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

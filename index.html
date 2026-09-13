@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manpreet Chaudhary | Research Intern @ IIT Roorkee • Systems & Full-Stack Developer</title>
+  <meta name="description" content="Personal professional portfolio of Manpreet Chaudhary — Research Intern at IIT Roorkee contributing to the Autonomous Drone Development project under Dr. Neetesh Kumar, and architecting resilient digital platforms.">
+  <meta name="theme-color" content="#f8f9fa">
+  
+  <!-- Typography: Plus Jakarta Sans Display + Inter Body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div id="scroll-progress" class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Interactive Subtle Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Cursor Spotlight Layer -->
+  <div id="cursor-spotlight" class="cursor-spotlight-layer"></div>
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- Redesigned Navbar with Liquid Glass & Circular Avatar -->
+  <header class="navbar">
+    <div class="container-wide navbar-inner">
+      <a href="index.html" class="nav-brand" aria-label="Manpreet Chaudhary Home">
+        <div class="brand-avatar-wrap">
+          <img src="images/manpreet-avatar.jpg" alt="Manpreet Chaudhary" class="brand-avatar-img">
+          <span class="brand-beacon-dot"></span>
+        </div>
+        <div class="brand-text-col">
+          <span class="brand-name">Manpreet Chaudhary</span>
+          <span class="brand-sub">IIT Roorkee • CSE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-desktop" aria-label="Primary Navigation">
+        <div class="nav-item"><a href="index.html" class="nav-link active">Home</a></div>
+        <div class="nav-item"><a href="drone-research.html" class="nav-link">Drone Research</a></div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="experience.html" class="nav-link">Experience</a></div>
+        <div class="nav-item"><a href="skills.html" class="nav-link">Skills</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="nav-action-area">
+        <button id="mobile-nav-toggle" class="nav-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-nav-drawer">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link active"><span>Home</span> <span>→</span></a></li>
+        <li><a href="drone-research.html" class="mobile-nav-link"><span>Drone Research</span> <span>→</span></a></li>
+        <li><a href="projects.html" class="mobile-nav-link"><span>Projects</span> <span>→</span></a></li>
+        <li><a href="experience.html" class="mobile-nav-link"><span>Experience</span> <span>→</span></a></li>
+        <li><a href="skills.html" class="mobile-nav-link"><span>Skills</span> <span>→</span></a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><span>Contact</span> <span>→</span></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Content Container -->
+  <main id="page-content">
+
+    <!-- ========================================================================
+         HERO SECTION: BALANCED 3-PART FULL-WIDTH ARCHITECTURE
+         Left Margin Panel • Center Stage (Headline + Photo + Playable 3D Object) • Right Margin Panel
+         ======================================================================== -->
+    <section class="section hero-section" style="padding-top: calc(var(--header-height) + 2rem);">
+      <div class="container-wide">
+        
+        <!-- Top Hero Row: Editorial Content (Left) + Retina Profile Showcase (Right) -->
+        <div class="hero-wide-wrapper">
+
+          <!-- Left Column: Editorial Content & CTA Actions -->
+          <div class="hero-editorial-col">
+            <div class="hero-text-block reveal-on-scroll">
+              <div class="status-pill">
+                <span class="status-indicator"></span>
+                <span>Intern Researcher @ IIT Roorkee • Dept. of CSE</span>
+              </div>
+
+              <h1 class="hero-title">
+                Engineering <span class="text-gradient">Autonomy</span> & Resilient Systems.
+              </h1>
+
+              <div class="hero-subtitle">
+                Manpreet Chaudhary — Intern Researcher & Systems Developer
+              </div>
+
+              <p class="hero-tagline">
+                <strong>Intern Researcher</strong> contributing to the <strong>Autonomous Drone Development</strong> research project under <strong>Dr. Neetesh Kumar</strong> at the Indian Institute of Technology Roorkee (Dept. of CSE). Designing high-performance distributed systems, edge platforms, and intelligent software architectures.
+              </p>
+
+              <div class="hero-actions stagger-container">
+                <a href="drone-research.html" class="btn btn-primary">
+                  <span>Explore Drone Research</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                
+                <a href="projects.html" class="btn btn-secondary">
+                  <span>View Projects (5)</span>
+                </a>
+
+                <a href="contact.html" class="btn btn-secondary">
+                  <span>Contact Directly</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Unobstructed Retina Profile Photo Showcase -->
+          <div class="hero-profile-col reveal-from-right">
+            <div class="profile-card-wrapper">
+              <div class="profile-photo-frame profile-reveal" id="hero-profile-container">
+                <img 
+                  src="images/manpreet-headshot.png" 
+                  alt="Manpreet Chaudhary — Intern Researcher at IIT Roorkee" 
+                  class="profile-image-elem"
+                  loading="eager"
+                  width="720"
+                  height="720"
+                >
+              </div>
+              <!-- Status Caption Below Photo -->
+              <div class="profile-caption-pill">
+                <span class="profile-badge-dot"></span>
+                <span>Manpreet Chaudhary • IIT Roorkee</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Middle Stage: Unified Two-Card Info Row (Side-by-Side on the SAME Horizontal Row) -->
+        <div class="hero-info-cards-row reveal-from-bottom">
+
+          <!-- Card 1: Academic Affiliation Credentials Card -->
+          <div class="hero-affiliation-bar" aria-label="Academic Affiliation Credentials">
+            <div class="edge-panel-header">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Academic Affiliation</span>
+              <span class="edge-badge" style="margin-left: auto;"><span>●</span> Active Lab Contributor</span>
+            </div>
+            <div class="hero-affiliation-grid">
+              <div class="edge-item">
+                <span class="edge-label">Institution</span>
+                <span class="edge-value">IIT Roorkee</span>
+                <span class="edge-sub">Dept. of CSE</span>
+              </div>
+              <div class="edge-item">
+                <span class="edge-label">Faculty Advisor</span>
+                <span class="edge-value">Dr. Neetesh Kumar</span>
+                <span class="edge-sub">Associate Professor</span>
+              </div>
+              <div class="edge-item">
+                <span class="edge-label">Appointment</span>
+                <span class="edge-value">Intern Researcher</span>
+                <span class="edge-sub">July 2026 — Present</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Dedicated Initiative & Impact Card -->
+          <div class="hero-impact-card" aria-label="Research Metrics and Platform Highlights">
+            <div class="edge-panel-header">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Initiative & Impact</span>
+              <span class="edge-badge" style="margin-left: auto;"><span>●</span> Live Project</span>
+            </div>
+            <div class="hero-impact-grid">
+              <div class="edge-item">
+                <span class="edge-label">Core Research</span>
+                <span class="edge-value">Autonomous Drone Development</span>
+                <span class="edge-sub">Aerial Robotics & Autonomy</span>
+              </div>
+              <div class="edge-item">
+                <span class="edge-label">Control Loop</span>
+                <span class="edge-value">&lt; 24ms Platform Loop</span>
+                <span class="edge-sub">Real-Time Edge Telemetry</span>
+              </div>
+              <div class="edge-item">
+                <span class="edge-label">Engineered Platforms</span>
+                <span class="edge-value">5 Production Systems</span>
+                <span class="edge-sub">Symposia, FinTech &amp; ML</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Bottom Stage: Centered Interactive 3D Drone Telemetry & LiDAR Spatial Hologram -->
+        <div class="hero-centerpiece-stage reveal-on-scroll">
+          <div class="hero-centerpiece-box" title="Interactive 3D Drone Telemetry & LiDAR Spatial Core — Drag or hover to interact">
+            <canvas id="hero-centerpiece-canvas"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PAGE NAVIGATION GATEWAY: EXPLORE SUB-PAGES
+         ======================================================================== -->
+    <section class="section" style="background: #ffffff; border-top: 1px solid var(--border-subtle);">
+      <div class="container-wide">
+        
+        <div class="section-header reveal-from-top">
+          <span class="section-tag">Portfolio Directory</span>
+          <h2>Explore Dedicated Portfolios & Technical Chapters</h2>
+          <p class="section-description">
+            Navigate through specialized chapters covering our robotics autonomy research, production systems, career timeline, and skills matrix.
+          </p>
+        </div>
+
+        <!-- 5-Column Reusable Quick-Links Grid (Equal Height & Balanced Content) -->
+        <div class="quicklinks-grid stagger-container">
+          
+          <!-- QuickLink 1: Drone Research -->
+          <a href="drone-research.html" class="quicklink-card reveal-from-left">
+            <div class="quicklink-header">
+              <div class="quicklink-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <span class="badge badge-accent">Research</span>
+            </div>
+            <h3 class="quicklink-title">Autonomous Drone Development</h3>
+            <p class="quicklink-desc">
+              Full technical deep-dive into aerial robotics research under Dr. Neetesh Kumar, featuring live telemetry HUD and a 4-stage vision pipeline.
+            </p>
+            <div class="quicklink-footer">
+              <span>Explore Research</span>
+              <svg class="quicklink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- QuickLink 2: Projects -->
+          <a href="projects.html" class="quicklink-card reveal-from-bottom">
+            <div class="quicklink-header">
+              <div class="quicklink-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <span class="badge badge-accent">5 Systems</span>
+            </div>
+            <h3 class="quicklink-title">Featured Systems & Projects</h3>
+            <p class="quicklink-desc">
+              Engineered production platforms including the AI for Secure 6G Workshop system with Razorpay integration and Dr. Neetesh Kumar's Faculty Hub.
+            </p>
+            <div class="quicklink-footer">
+              <span>View Projects</span>
+              <svg class="quicklink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- QuickLink 3: Experience -->
+          <a href="experience.html" class="quicklink-card reveal-from-bottom">
+            <div class="quicklink-header">
+              <div class="quicklink-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <span class="badge badge-accent">Timeline</span>
+            </div>
+            <h3 class="quicklink-title">Experience & Credentials</h3>
+            <p class="quicklink-desc">
+              Chronological research appointment history at IIT Roorkee under Dr. Neetesh Kumar, symposia leadership, and 4 verified certifications.
+            </p>
+            <div class="quicklink-footer">
+              <span>Explore Timeline</span>
+              <svg class="quicklink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- QuickLink 4: Skills -->
+          <a href="skills.html" class="quicklink-card reveal-from-bottom">
+            <div class="quicklink-header">
+              <div class="quicklink-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <span class="badge badge-accent">4 Domains</span>
+            </div>
+            <h3 class="quicklink-title">Technical Skill Matrix</h3>
+            <p class="quicklink-desc">
+              Four-quadrant competency breakdown spanning Python robotics autonomy, TCP/IP systems fundamentals, full-stack, and cybersecurity.
+            </p>
+            <div class="quicklink-footer">
+              <span>View Matrix</span>
+              <svg class="quicklink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- QuickLink 5: Contact -->
+          <a href="contact.html" class="quicklink-card reveal-from-right">
+            <div class="quicklink-header">
+              <div class="quicklink-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <span class="badge badge-accent">Direct</span>
+            </div>
+            <h3 class="quicklink-title">Direct Communication</h3>
+            <p class="quicklink-desc">
+              Direct telephone line (+91 93685 03531), official institutional email, and interactive message form for research collaborations and inquiries.
+            </p>
+            <div class="quicklink-footer">
+              <span>Contact Directly</span>
+              <svg class="quicklink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Project Detail Modal -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div id="modal-dynamic-content" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Spotlight Ambient Focus Toggle Widget -->
+  <button id="spotlight-toggle-btn" class="spotlight-toggle-widget" title="Cursor Spotlight Aura: Active (Click to toggle)" aria-label="Toggle Cursor Spotlight Aura">
+    <span class="indicator-bulb"></span>
+    <span class="toggle-text">Aura Focus: Active</span>
+  </button>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container-wide footer-content">
+      <div class="footer-brand-col">
+        <div class="footer-name">Manpreet Chaudhary</div>
+        <p class="footer-credits">
+          Research Intern @ IIT Roorkee • Mentored by Dr. Neetesh Kumar (Associate Professor, Dept. of CSE)
+        </p>
+      </div>
+
+      <div class="footer-right-col">
+        <div class="footer-social-links">
+          <a href="https://www.linkedin.com/in/manpreet-chaudhary-238244279/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Profile">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:manpreet.chaudhary@cse.iitr.ac.in" class="footer-social-link" aria-label="Email Address">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Email</span>
+          </a>
+        </div>
+        <span class="footer-copyright">© 2026 Manpreet Chaudhary. Designed for performance & clarity.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/canvas-bg.js"></script>
+  <script type="module" src="js/cursor.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

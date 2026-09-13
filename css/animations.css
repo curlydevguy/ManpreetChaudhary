@@ -1,0 +1,297 @@
+/* ==========================================================================
+   CHOREOGRAPHED MULTI-DIRECTIONAL ANIMATION ENGINE
+   Spring Physical Easing • Multi-Directional Entries • Receding Gracefully
+   Cursor Spotlight Layer • 3D Orbital Parallax & Tooltip Dynamics
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Multi-Directional Off-Screen Base States (GPU Smooth — Transform & Opacity Only)
+   -------------------------------------------------------------------------- */
+.reveal-on-scroll,
+.reveal-from-left,
+.reveal-from-right,
+.reveal-from-bottom,
+.reveal-from-top,
+.reveal-scale,
+.profile-reveal {
+  transition: 
+    opacity 480ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+  pointer-events: none;
+}
+
+/* Default / Rise from Below (Standard Vertical Entry) */
+.reveal-on-scroll,
+.reveal-from-bottom {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+}
+
+/* Slide in from Left */
+.reveal-from-left {
+  opacity: 0;
+  transform: translate3d(-32px, 0, 0);
+}
+
+/* Slide in from Right */
+.reveal-from-right {
+  opacity: 0;
+  transform: translate3d(32px, 0, 0);
+}
+
+/* Descend from Above */
+.reveal-from-top {
+  opacity: 0;
+  transform: translate3d(0, -28px, 0);
+}
+
+/* Smooth Scale Expansion */
+.reveal-scale,
+.profile-reveal {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0) scale(0.96);
+}
+
+/* --------------------------------------------------------------------------
+   2. In-Viewport Focused & Settled State (Full Opacity & Natural Position)
+   -------------------------------------------------------------------------- */
+.reveal-on-scroll.is-revealed,
+.reveal-from-left.is-revealed,
+.reveal-from-right.is-revealed,
+.reveal-from-bottom.is-revealed,
+.reveal-from-top.is-revealed,
+.reveal-scale.is-revealed,
+.profile-reveal.is-revealed {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale(1) !important;
+  pointer-events: auto !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Out-Of-Viewport / Exit State (Immediate Synchronous Reset On Scroll Up)
+   -------------------------------------------------------------------------- */
+.reveal-on-scroll:not(.is-revealed),
+.reveal-from-left:not(.is-revealed),
+.reveal-from-right:not(.is-revealed),
+.reveal-from-bottom:not(.is-revealed),
+.reveal-from-top:not(.is-revealed),
+.reveal-scale:not(.is-revealed),
+.profile-reveal:not(.is-revealed) {
+  transition-delay: 0ms !important;
+}
+
+/* Stagger Delays for Structured Groups */
+.stagger-container > *:nth-child(1) { transition-delay: 35ms; }
+.stagger-container > *:nth-child(2) { transition-delay: 85ms; }
+.stagger-container > *:nth-child(3) { transition-delay: 135ms; }
+.stagger-container > *:nth-child(4) { transition-delay: 185ms; }
+.stagger-container > *:nth-child(5) { transition-delay: 235ms; }
+.stagger-container > *:nth-child(6) { transition-delay: 285ms; }
+.stagger-container > *:nth-child(7) { transition-delay: 335ms; }
+.stagger-container > *:nth-child(8) { transition-delay: 385ms; }
+
+/* --------------------------------------------------------------------------
+   4. Cursor Spotlight & Card Specular Highlights
+   -------------------------------------------------------------------------- */
+.cursor-spotlight-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  mix-blend-mode: normal;
+}
+
+/* Card local specular shine via CSS variables set in cursor.js */
+.project-card,
+.timeline-card,
+.skills-domain-card,
+.glass-card,
+.cert-card,
+.pipeline-step-card {
+  position: relative;
+}
+
+.project-card::before,
+.timeline-card::before,
+.skills-domain-card::before,
+.glass-card::before,
+.cert-card::before,
+.pipeline-step-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    380px circle at var(--card-x, -999px) var(--card-y, -999px),
+    rgba(37, 99, 235, 0.08) 0%,
+    rgba(37, 99, 235, 0.02) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.project-card:hover::before,
+.timeline-card:hover::before,
+.skills-domain-card:hover::before,
+.glass-card:hover::before,
+.cert-card:hover::before,
+.pipeline-step-card:hover::before {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   5. Interactive 3D Gyroscope Centerpiece Animations
+   Idle Rotations + Cursor Parallax Spring Interpolation
+   -------------------------------------------------------------------------- */
+@keyframes spinOrbitalFigure {
+  0% { transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg); }
+  50% { transform: rotateX(38deg) rotateY(180deg) rotateZ(12deg); }
+  100% { transform: rotateX(20deg) rotateY(360deg) rotateZ(0deg); }
+}
+
+@keyframes spinRingTelemetry {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
+}
+
+@keyframes spinRingA {
+  0% { transform: rotate3d(1, 0.35, 0, 0deg); }
+  100% { transform: rotate3d(1, 0.35, 0, 360deg); }
+}
+
+@keyframes spinRingB {
+  0% { transform: rotate3d(0.35, 1, 0.35, 0deg); }
+  100% { transform: rotate3d(0.35, 1, 0.35, 360deg); }
+}
+
+@keyframes spinRingC {
+  0% { transform: rotate3d(0.2, 0.35, 1, 360deg); }
+  100% { transform: rotate3d(0.2, 0.35, 1, 0deg); }
+}
+
+@keyframes spinRingD {
+  0% { transform: rotate3d(0.5, 0.2, 1, 0deg); }
+  100% { transform: rotate3d(0.5, 0.2, 1, -360deg); }
+}
+
+@keyframes gentleFloatCore {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.12);
+    box-shadow: 0 0 35px rgba(37, 99, 235, 0.45);
+  }
+}
+
+.anim-ring-telemetry {
+  animation: spinRingTelemetry 54s linear infinite;
+}
+
+.anim-ring-a {
+  animation: spinRingA 24s linear infinite;
+}
+
+.anim-ring-b {
+  animation: spinRingB 30s linear infinite;
+}
+
+.anim-ring-c {
+  animation: spinRingC 36s linear infinite;
+}
+
+.anim-ring-d {
+  animation: spinRingD 20s linear infinite;
+}
+
+.anim-core-pulse {
+  animation: gentleFloatCore 4s ease-in-out infinite;
+}
+
+/* Interactive Orbital Nodes & Tooltips */
+.orbital-node-btn {
+  pointer-events: auto !important;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.orbital-node-btn:hover {
+  transform: translate(-50%, -50%) scale(1.6) !important;
+  box-shadow: 0 0 16px rgba(37, 99, 235, 0.9) !important;
+}
+
+.orbital-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 30;
+}
+
+.orbital-node-btn:hover .orbital-tooltip,
+.orbital-node-btn.is-active .orbital-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   6. Timeline & Accessibility
+   -------------------------------------------------------------------------- */
+.timeline-node.active-node {
+  box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.2), 0 0 20px rgba(37, 99, 235, 0.5);
+  background-color: var(--accent-primary) !important;
+  border-color: #ffffff !important;
+  transform: scale(1.24);
+  transition: all 340ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal-on-scroll,
+  .reveal-from-left,
+  .reveal-from-right,
+  .reveal-from-bottom,
+  .reveal-from-top,
+  .reveal-scale,
+  .profile-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .anim-ring-telemetry,
+  .anim-ring-a,
+  .anim-ring-b,
+  .anim-ring-c,
+  .anim-ring-d,
+  .anim-core-pulse {
+    animation: none !important;
+  }
+}

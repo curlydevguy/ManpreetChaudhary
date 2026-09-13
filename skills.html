@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Skills Matrix | Manpreet Chaudhary — Systems & Full-Stack</title>
+  <meta name="description" content="Four-quadrant technical skill matrix of Manpreet Chaudhary: Python & Autonomous Robotics, TCP/IP & Systems Fundamentals, Full-Stack Web Architecture, and Cybersecurity & Threat Analysis.">
+  <meta name="theme-color" content="#f8f9fa">
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div id="scroll-progress" class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Interactive Subtle Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Cursor Spotlight Layer -->
+  <div id="cursor-spotlight" class="cursor-spotlight-layer"></div>
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- Redesigned Navbar with Liquid Glass & Circular Avatar -->
+  <header class="navbar">
+    <div class="container-wide navbar-inner">
+      <a href="index.html" class="nav-brand" aria-label="Manpreet Chaudhary Home">
+        <div class="brand-avatar-wrap">
+          <img src="images/manpreet-avatar.jpg" alt="Manpreet Chaudhary" class="brand-avatar-img">
+          <span class="brand-beacon-dot"></span>
+        </div>
+        <div class="brand-text-col">
+          <span class="brand-name">Manpreet Chaudhary</span>
+          <span class="brand-sub">IIT Roorkee • CSE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-desktop" aria-label="Primary Navigation">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="drone-research.html" class="nav-link">Drone Research</a></div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="experience.html" class="nav-link">Experience</a></div>
+        <div class="nav-item"><a href="skills.html" class="nav-link active">Skills</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="nav-action-area">
+        <button id="mobile-nav-toggle" class="nav-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-nav-drawer">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link"><span>Home</span> <span>→</span></a></li>
+        <li><a href="drone-research.html" class="mobile-nav-link"><span>Drone Research</span> <span>→</span></a></li>
+        <li><a href="projects.html" class="mobile-nav-link"><span>Projects</span> <span>→</span></a></li>
+        <li><a href="experience.html" class="mobile-nav-link"><span>Experience</span> <span>→</span></a></li>
+        <li><a href="skills.html" class="mobile-nav-link active"><span>Skills</span> <span>→</span></a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><span>Contact</span> <span>→</span></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main id="page-content">
+
+    <section class="section" style="padding-top: calc(var(--header-height) + 2.5rem);">
+      <div class="container-wide">
+        
+        <!-- Section Header -->
+        <div class="section-header reveal-from-top">
+          <span class="section-tag">Four-Quadrant Technical Matrix</span>
+          <h1>Technical Core Competencies</h1>
+          <p class="section-description">
+            Cross-disciplinary engineering capabilities spanning autonomous aerial robotics, low-level networking & OS internals, production full-stack web platforms, and defensive/offensive cybersecurity.
+          </p>
+        </div>
+
+        <!-- 4-Quadrant Matrix Grid -->
+        <div class="skills-quadrant-grid">
+          
+          <!-- Quadrant 1: Python & Autonomous Robotics -->
+          <div class="skill-quadrant-card reveal-from-left">
+            <div class="skill-quadrant-header">
+              <div class="skill-quadrant-title-group">
+                <div class="skill-quadrant-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v2H6a4 4 0 0 0-4 4v2h2a4 4 0 0 0 4-4V8h2a4 4 0 0 0 4-4V2z"></path><circle cx="12" cy="12" r="3"></circle><path d="M12 22a4 4 0 0 0 4-4v-2h2a4 4 0 0 0 4-4v-2h-2a4 4 0 0 0-4 4v2h-2a4 4 0 0 0-4 4v2z"></path></svg>
+                </div>
+                <div class="skill-quadrant-title">Python & Autonomous Robotics</div>
+              </div>
+              <span class="skill-quadrant-badge">Autonomy Core</span>
+            </div>
+            <p class="skill-quadrant-desc">
+              Formulating software autonomy pipelines, spatial triangulation, deep vision keypoint extraction, and companion computer telemetry for unmanned aerial systems.
+            </p>
+            <div class="skill-quadrant-list">
+              <span class="skill-pill">Python (Scientific & Systems)</span>
+              <span class="skill-pill">Autonomous UAV Control</span>
+              <span class="skill-pill">ROS / ROS2 Architecture</span>
+              <span class="skill-pill">YOLOPoint Keypoint Detection</span>
+              <span class="skill-pill">ArUco Fiducial Triangulation</span>
+              <span class="skill-pill">Intel RealSense D455 Vision</span>
+              <span class="skill-pill">OpenCV & Spatial Point Clouds</span>
+              <span class="skill-pill">Telemetry Streaming Pipelines</span>
+            </div>
+          </div>
+
+          <!-- Quadrant 2: TCP/IP & Systems Fundamentals -->
+          <div class="skill-quadrant-card reveal-from-right">
+            <div class="skill-quadrant-header">
+              <div class="skill-quadrant-title-group">
+                <div class="skill-quadrant-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                </div>
+                <div class="skill-quadrant-title">TCP/IP & Systems Fundamentals</div>
+              </div>
+              <span class="skill-quadrant-badge">Low-Level Sys</span>
+            </div>
+            <p class="skill-quadrant-desc">
+              Low-level networking protocols, socket programming, Linux system administration, and latency-optimized embedded systems execution.
+            </p>
+            <div class="skill-quadrant-list">
+              <span class="skill-pill">TCP/IP & Network Protocols</span>
+              <span class="skill-pill">Socket Programming</span>
+              <span class="skill-pill">Linux CLI & Shell Scripting</span>
+              <span class="skill-pill">Edge Compute & Caching</span>
+              <span class="skill-pill">Serial UART / I2C / SPI</span>
+              <span class="skill-pill">Embedded Companion SBCs</span>
+              <span class="skill-pill">Data Structures & Algorithms</span>
+              <span class="skill-pill">Systems Latency Profiling (&lt;24ms)</span>
+            </div>
+          </div>
+
+          <!-- Quadrant 3: Full-Stack Web Architecture -->
+          <div class="skill-quadrant-card reveal-from-left">
+            <div class="skill-quadrant-header">
+              <div class="skill-quadrant-title-group">
+                <div class="skill-quadrant-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <div class="skill-quadrant-title">Full-Stack Web Architecture</div>
+              </div>
+              <span class="skill-quadrant-badge">Production Web</span>
+            </div>
+            <p class="skill-quadrant-desc">
+              Building responsive, high-reliability production web platforms with modern frameworks, fintech payment webhooks, and fluid UI experiences.
+            </p>
+            <div class="skill-quadrant-list">
+              <span class="skill-pill">Next.js (App Router)</span>
+              <span class="skill-pill">TypeScript & Modern ES</span>
+              <span class="skill-pill">Node.js & Express</span>
+              <span class="skill-pill">Razorpay Payment Webhooks</span>
+              <span class="skill-pill">Google Sheets & Drive APIs</span>
+              <span class="skill-pill">Tailwind CSS & Design Systems</span>
+              <span class="skill-pill">GPU-Accelerated CSS 3D</span>
+              <span class="skill-pill">High-Performance Web UI</span>
+            </div>
+          </div>
+
+          <!-- Quadrant 4: Cybersecurity & Threat Analysis -->
+          <div class="skill-quadrant-card reveal-from-right">
+            <div class="skill-quadrant-header">
+              <div class="skill-quadrant-title-group">
+                <div class="skill-quadrant-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div class="skill-quadrant-title">Cybersecurity & Threat Analysis</div>
+              </div>
+              <span class="skill-quadrant-badge">Threat Intel</span>
+            </div>
+            <p class="skill-quadrant-desc">
+              Packet inspection, threat intelligence analysis, incident response playbooks, and security auditing for interconnected digital architectures.
+            </p>
+            <div class="skill-quadrant-list">
+              <span class="skill-pill">Cyber Threat Analysis</span>
+              <span class="skill-pill">Malware Behavior Inspection</span>
+              <span class="skill-pill">Incident Response Playbooks</span>
+              <span class="skill-pill">Packet Analysis & Wireshark</span>
+              <span class="skill-pill">Vulnerability Assessment</span>
+              <span class="skill-pill">Authentication & OTP Verification</span>
+              <span class="skill-pill">OWASP Security Guidelines</span>
+              <span class="skill-pill">Secure Systems Design</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tooling & Systems Matrix -->
+        <div style="margin-top: clamp(3.5rem, 5vw, 5.5rem);">
+          <div class="section-header reveal-from-top" style="margin-bottom: 2rem;">
+            <span class="section-tag">Ecosystem & Platforms</span>
+            <h2>Environments, Tools & Hardware</h2>
+          </div>
+
+          <div class="skills-domain-grid">
+            
+            <div class="skills-domain-card reveal-from-bottom">
+              <div class="domain-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <span>Languages & Runtimes</span>
+              </div>
+              <div class="domain-pills">
+                <span class="skill-pill">Python 3.10+</span>
+                <span class="skill-pill">C++ (Modern)</span>
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">JavaScript ES6+</span>
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">Bash / POSIX Shell</span>
+                <span class="skill-pill">SQL</span>
+                <span class="skill-pill">HTML5 / CSS3</span>
+              </div>
+            </div>
+
+            <div class="skills-domain-card reveal-from-bottom">
+              <div class="domain-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                <span>Hardware & Sensors</span>
+              </div>
+              <div class="domain-pills">
+                <span class="skill-pill">Intel RealSense D455</span>
+                <span class="skill-pill">NVIDIA Jetson SBCs</span>
+                <span class="skill-pill">Companion Computers</span>
+                <span class="skill-pill">Pixhawk Autopilots</span>
+                <span class="skill-pill">UART & I2C Interfaces</span>
+                <span class="skill-pill">Monocular Cameras</span>
+                <span class="skill-pill">USB / Serial Protocols</span>
+                <span class="skill-pill">Edge Telemetry Links</span>
+              </div>
+            </div>
+
+            <div class="skills-domain-card reveal-from-bottom">
+              <div class="domain-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2z"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                <span>Tooling & Frameworks</span>
+              </div>
+              <div class="domain-pills">
+                <span class="skill-pill">ROS / ROS2</span>
+                <span class="skill-pill">OpenCV</span>
+                <span class="skill-pill">Next.js App Router</span>
+                <span class="skill-pill">Tailwind CSS</span>
+                <span class="skill-pill">Git & GitHub</span>
+                <span class="skill-pill">Linux (Ubuntu 22.04)</span>
+                <span class="skill-pill">Wireshark</span>
+                <span class="skill-pill">VS Code / Dev Tools</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Action Callout Box -->
+        <div style="margin-top: clamp(4rem, 6vw, 6rem);" class="reveal-from-bottom">
+          <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: clamp(2rem, 3.5vw, 3.5rem); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem; box-shadow: var(--shadow-md);">
+            <div style="max-width: 680px;">
+              <span class="section-tag" style="margin-bottom: 0.5rem;">Cross-Disciplinary Integration</span>
+              <h3 style="font-size: 1.6rem; color: var(--text-primary); margin-bottom: 0.75rem;">
+                See These Skills in Production & Lab Research
+              </h3>
+              <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 0;">
+                Review how these capabilities translate into functioning research prototypes, autonomous drone pipelines at IIT Roorkee, and production web platforms.
+              </p>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem;">
+              <a href="drone-research.html" class="btn btn-primary">
+                <span>Drone Research</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="projects.html" class="btn btn-secondary">
+                <span>Featured Projects</span>
+              </a>
+              <a href="contact.html" class="btn btn-secondary">
+                <span>Contact Manpreet</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Spotlight Ambient Focus Toggle Widget -->
+  <button id="spotlight-toggle-btn" class="spotlight-toggle-widget" title="Cursor Spotlight Aura: Active (Click to toggle)" aria-label="Toggle Cursor Spotlight Aura">
+    <span class="indicator-bulb"></span>
+    <span class="toggle-text">Aura Focus: Active</span>
+  </button>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container-wide footer-content">
+      <div class="footer-brand-col">
+        <div class="footer-name">Manpreet Chaudhary</div>
+        <p class="footer-credits">
+          Research Intern @ IIT Roorkee • Mentored by Dr. Neetesh Kumar (Associate Professor, Dept. of CSE)
+        </p>
+      </div>
+
+      <div class="footer-right-col">
+        <div class="footer-social-links">
+          <a href="https://www.linkedin.com/in/manpreet-chaudhary-238244279/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Profile">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:manpreet.chaudhary@cse.iitr.ac.in" class="footer-social-link" aria-label="Email Address">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Email</span>
+          </a>
+        </div>
+        <span class="footer-copyright">© 2026 Manpreet Chaudhary. Designed for performance & clarity.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/canvas-bg.js"></script>
+  <script type="module" src="js/cursor.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "manpreet-chaudhary-portfolio",
+  "version": "1.0.0",
+  "description": "Personal professional portfolio website for Manpreet Chaudhary - Research Intern @ IIT Roorkee",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "iit-roorkee",
+    "research-intern",
+    "autonomous-drone",
+    "systems-engineer",
+    "cinematic-dark"
+  ],
+  "author": "Manpreet Chaudhary",
+  "license": "MIT"
+}
