@@ -19,7 +19,7 @@ A cinematic, high-performance personal professional portfolio website built for 
 2. **About (`about.html`)**: Professional biography, current role at IIT Roorkee under Dr. Neetesh Kumar (started July 6, 2026, ongoing), Autonomous Drone Development focus, and categorized skill tags.
 3. **Experience (`experience.html`)**: Vertical illuminated timeline with scroll-ignited nodes, IIT Roorkee research internship details, workshop platforms lead, and verified LinkedIn certification badges.
 4. **Projects (`projects.html`)**: Staggered project grid with dark-mask slide-up hover reveal, technical specs, external live links, and interactive project detail modal.
-5. **Contact (`contact.html`)**: Minimal contact form with loading spinner & success checkmark micro-interactions, institutional email with copy-to-clipboard, and direct LinkedIn profile link.
+5. **Contact (`contact.html`)**: Minimal contact form with loading spinner & success checkmark micro-interactions, direct email with copy-to-clipboard, and direct LinkedIn profile link.
 
 ---
 

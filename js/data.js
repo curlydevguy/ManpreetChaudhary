@@ -30,9 +30,8 @@ export const PORTFOLIO_DATA = {
     location: "Roorkee, Uttarakhand, India",
     socials: {
       linkedin: "https://www.linkedin.com/in/manpreet-chaudhary-238244279/",
-      github: "https://github.com",
-      email: "manpreet.chaudhary@cse.iitr.ac.in",
-      phone: "+91 93685 03531"
+      github: "https://github.com/curlydevguy",
+      email: "manpreetchaudhary@outlook.com"
     }
   },
 

@@ -52,7 +52,7 @@ export function initContactFeatures() {
   // Copy Email to Clipboard
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
-      const email = copyEmailBtn.getAttribute('data-email') || 'manpreet.chaudhary@cse.iitr.ac.in';
+      const email = copyEmailBtn.getAttribute('data-email') || 'manpreetchaudhary@outlook.com';
       navigator.clipboard.writeText(email).then(() => {
         const originalText = copyEmailBtn.innerHTML;
         copyEmailBtn.innerHTML = `
