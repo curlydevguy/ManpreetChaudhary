@@ -2,10 +2,9 @@
   "name": "manpreet-chaudhary-portfolio",
   "version": "1.0.0",
   "description": "Personal professional portfolio website for Manpreet Chaudhary - Research Intern @ IIT Roorkee",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node local-server.js",
+    "serve": "node local-server.js"
   },
   "keywords": [
     "portfolio",
