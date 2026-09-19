@@ -7,24 +7,24 @@ export const PORTFOLIO_DATA = {
   profile: {
     name: "Manpreet Chaudhary",
     shortName: "Manpreet",
-    heroHeadline: "Engineering Autonomy & Resilient Systems",
-    role: "Research Intern @ IIT Roorkee, Dept. of CSE | Systems & Full-Stack Developer",
+    heroHeadline: "Engineering Autonomy, Resilient Systems & Zero Trust Architecture",
+    role: "Research Intern @ IIT Roorkee, Dept. of CSE | Systems & Zero Trust Architecture Researcher",
     mentor: "Dr. Neetesh Kumar (Associate Professor, Dept. of CSE, IIT Roorkee)",
     institution: "Indian Institute of Technology Roorkee (IIT Roorkee)",
     department: "Department of Computer Science & Engineering",
     startDate: "July 6, 2026",
     status: "Ongoing",
-    tagline: "Contributing to the Autonomous Drone Development research project under Dr. Neetesh Kumar at IIT Roorkee (Dept. of CSE). Engineering resilient distributed platforms, edge systems, and intelligent software architectures.",
-    bioShort: "Research Intern at IIT Roorkee contributing to the Autonomous Drone Development project under Dr. Neetesh Kumar, and engineering high-impact full-stack digital platforms.",
+    tagline: "Contributing to Autonomous Drone Development and Zero Trust Architecture (ZTA) research under Dr. Neetesh Kumar at IIT Roorkee (Dept. of CSE). Engineering resilient distributed platforms, edge security, and intelligent systems.",
+    bioShort: "Research Intern at IIT Roorkee investigating Autonomous Drone Development and Zero Trust Architecture (ZTA) under Dr. Neetesh Kumar, and architecting resilient full-stack systems.",
     bioFull: [
-      "I am a systems and full-stack developer based at the Indian Institute of Technology Roorkee (IIT Roorkee), working at the intersection of aerial robotics autonomy, computer vision, and resilient distributed platforms.",
-      "Under the supervision of Dr. Neetesh Kumar (Associate Professor, Department of Computer Science & Engineering), I contribute to the Autonomous Drone Development research project, engineering autonomous flight pipelines, spatial localization modules, and real-time telemetry streaming.",
-      "Beyond robotics, I architect production-grade web platforms — from international symposium portals with automated payment pipelines and AI-driven validation, to high-performance faculty research hubs and financial quantitative modeling."
+      "I am a systems and security developer based at the Indian Institute of Technology Roorkee (IIT Roorkee), working at the intersection of aerial robotics autonomy, Zero Trust Architecture (ZTA), and resilient distributed platforms.",
+      "Under the supervision of Dr. Neetesh Kumar (Associate Professor, Department of Computer Science & Engineering), I contribute to core research initiatives in Autonomous Drone Development (GPS-denied localization, spatial mapping) and investigate Zero Trust Architecture (ZTA) frameworks (NIST SP 800-207) tailored for decentralized edge nodes and autonomous swarms.",
+      "Beyond robotics and security research, I architect production-grade web platforms — from international symposium portals with automated payment pipelines and AI-driven validation, to high-performance faculty research hubs and financial quantitative modeling."
     ],
     stats: [
       { label: "Research Institution", value: "IIT Roorkee", highlight: true },
       { label: "Faculty Advisor", value: "Dr. Neetesh Kumar", highlight: false },
-      { label: "Core Research Initiative", value: "Autonomous Drone Development", highlight: true },
+      { label: "Active Research Tracks", value: "Drone Autonomy & Zero Trust", highlight: true },
       { label: "Edge Platform Latency", value: "< 24ms", highlight: false }
     ],
     location: "Roorkee, Uttarakhand, India",
@@ -69,6 +69,33 @@ export const PORTFOLIO_DATA = {
   },
 
   projects: [
+    {
+      id: "zero-trust-architecture-research",
+      title: "Zero Trust Architecture (ZTA) for Distributed Edge & Autonomous Networks",
+      category: "Active Research • Cybersecurity & Systems",
+      featured: true,
+      status: "Active Research • In Progress",
+      tagline: "Formulating continuous mutual verification, microsegmentation, and dynamic PDP/PEP policy enforcement for distributed autonomous systems and next-generation edge networks.",
+      description: "Ongoing systems and cybersecurity research investigating Zero Trust Architecture (ZTA) paradigms (NIST SP 800-207) tailored for decentralized edge computing, autonomous UAV swarms, and high-stakes cyber-physical environments.",
+      fullDescription: "Current academic research exploring the convergence of Zero Trust Architecture (ZTA) and distributed edge/autonomous networks. In perimeterless environments where edge devices and UAVs operate over untrusted wireless backhauls, traditional perimeter security fails. This research formulates a lightweight, decentralized Zero Trust framework incorporating continuous cryptographic identity verification, granular microsegmentation, dynamic risk-based Policy Decision and Enforcement Points (PDP/PEP), and telemetry-driven behavioral anomaly detection to enforce strict least-privilege access without degrading real-time control loop latencies.",
+      techStack: ["Zero Trust (NIST SP 800-207)", "PDP / PEP Architecture", "Microsegmentation", "Mutual TLS (mTLS)", "Cryptographic Identity (SPIFFE)", "Edge Security", "Telemetry Anomaly Detection", "Python & C++"],
+      metrics: [
+        { label: "Status", value: "Active Research • In Progress" },
+        { label: "Framework", value: "NIST SP 800-207 Alignment" },
+        { label: "Focus", value: "Decentralized Edge PDP/PEP" }
+      ],
+      liveUrl: "#",
+      githubUrl: "https://github.com/curlydevguy",
+      highlights: [
+        "Formulation of decentralized Policy Decision Points (PDP) and Policy Enforcement Points (PEP) optimized for constrained edge nodes",
+        "Dynamic risk scoring driven by real-time sensor and network telemetry to trigger immediate session revocation upon anomaly detection",
+        "Cryptographic mutual authentication (mTLS / SPIFFE) establishing zero-trust identities across distributed cyber-physical endpoints",
+        "Fine-grained network microsegmentation preventing lateral adversary movement across autonomous vehicle and sensor clusters",
+        "Formal threat modeling against man-in-the-middle (MitM), rogue node injection, and telemetry spoofing in GPS-denied autonomous swarms"
+      ],
+      gradient: "linear-gradient(135deg, rgba(14, 165, 233, 0.25) 0%, rgba(99, 102, 241, 0.2) 100%)",
+      accentColor: "#0ea5e9"
+    },
     {
       id: "workshop-secure-6g",
       title: "AI for Secure 6G Workshop Platform",
@@ -205,14 +232,15 @@ export const PORTFOLIO_DATA = {
       location: "Roorkee, Uttarakhand, India",
       period: "July 6, 2026 — Present (Ongoing)",
       status: "Active",
-      summary: "Formulating software autonomy pipelines for GPS-denied drone navigation and engineering digital research platforms.",
+      summary: "Formulating software autonomy pipelines for GPS-denied drone navigation and investigating Zero Trust Architecture (ZTA) for distributed edge systems.",
       bullets: [
         "Formulating and developing autonomous flight and navigation software modules for unmanned aerial vehicles (UAVs) under Dr. Neetesh Kumar.",
+        "Investigating Zero Trust Architecture (ZTA) frameworks (NIST SP 800-207) for decentralized edge networks, formulating continuous verification models and microsegmentation strategies for distributed cyber-physical nodes.",
         "Engineering GPS-denied localization pipelines using mono-camera triangulation, ArUco fiducials, YOLOPoint keypoints, and Intel RealSense D455 depth cameras.",
         "Streaming real-time telemetry, sensor state estimation, and spatial logs between drone companion computers and ground stations.",
         "Architecting academic platform infrastructures supporting international department symposiums and faculty research dissemination."
       ],
-      skills: ["Autonomous UAVs", "IIT Roorkee", "C++", "Python", "ROS2", "YOLOPoint", "Intel RealSense D455", "Systems Architecture"]
+      skills: ["Autonomous UAVs", "Zero Trust (ZTA)", "NIST SP 800-207", "IIT Roorkee", "C++", "Python", "ROS2", "YOLOPoint", "Intel RealSense D455", "Microsegmentation"]
     },
     {
       id: "platform-engineer-symposia",
@@ -330,14 +358,16 @@ export const PORTFOLIO_DATA = {
       icon: "shield",
       desc: "Threat intelligence, packet inspection, incident response, and security posture.",
       skills: [
+        "Zero Trust Architecture (NIST SP 800-207)",
+        "Network Microsegmentation",
+        "Dynamic PDP / PEP Policy Engines",
+        "Mutual TLS (mTLS) & Cryptographic Auth",
         "Cyber Threat Analysis",
         "Malware Behavior Inspection",
         "Incident Response Playbooks",
         "Packet Analysis & Wireshark",
-        "Vulnerability Assessment",
-        "Auth & OTP Verification",
-        "OWASP Security Guidelines",
-        "Secure Systems Design"
+        "Vulnerability Assessment & OWASP",
+        "Secure Systems & Edge Design"
       ]
     }
   ]
